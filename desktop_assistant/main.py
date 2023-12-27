@@ -105,6 +105,23 @@ def run_jarvis():
          talk(info1)
      elif 'by' or 'bye' or 'goodbye' in command:
          sys.exit()
+    elif 'increase volume' in command:
+        # Add code to increase volume
+        # Example: You can use a system command to change the volume
+        os.system('nircmd.exe changesysvolume 2000')  # Adjust the value based on your needs
+        talk("Volume increased, sir.")
+    elif 'decrease volume' in command:
+        # Add code to decrease volume
+        os.system('nircmd.exe changesysvolume -2000')  # Adjust the value based on your needs
+        talk("Volume decreased, sir.")
+    elif 'mute' in command:
+        # Add code to mute volume
+        os.system('nircmd.exe mutesysvolume 1')
+        talk("Volume muted, sir.")
+    elif 'unmute' in command:
+        # Add code to unmute volume
+        os.system('nircmd.exe mutesysvolume 0')
+        talk("Volume unmuted, sir.")
      else:
          talk("sorry sir, can you say that again?")
 while True:
